@@ -7,19 +7,13 @@ class Pila:
         self.puntero=-1
     
     def Pila_Vacia(self):
-        if self.pila == []:
-            return 'true'
-        else:
-            return 'false'
+            return self.pila == []
     
     def Pila_Llena(self):
-        if(len(self.pila)==self.capacidad):  # = self.puntero+1==self.capacidad
-            return 'true'
-        else:
-            return 'false'
+        return len(self.pila)==self.capacidad
         
     def Push(self, elemento):
-        if(self.Pila_Llena()=='true'):
+        if(self.Pila_Llena()):
             return "Pila Llena, el elemento "+str(elemento)+" no pudo ser agregado"
         else:
             self.pila.append(elemento)
@@ -27,7 +21,7 @@ class Pila:
             return "Elemento Agregado: "+str(elemento)
     
     def Pop(self):
-        if(self.Pila_Vacia()=='true'):
+        if(self.Pila_Vacia()):
             return "No Existe Ningun Elemento En La Pila, Pila Vacia"
         else:
             self.puntero = self.puntero - 1
@@ -56,7 +50,7 @@ class Pila:
             return self.pila[self.puntero]
     
     def Decapitar(self):
-        if(self.Pila_Vacia()=='true'):
+        if(self.Pila_Vacia()):
             return "Pila Vacia"
         else:
             self.pila.pop()

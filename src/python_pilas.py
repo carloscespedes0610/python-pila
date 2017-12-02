@@ -31,3 +31,5 @@ ej.Fondo_Pila(0)
 ej.Imprimir()
 #ej.Numero_Elementos()
 #ej.Imprimir()
+
+#ej.prueba()
