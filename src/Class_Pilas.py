@@ -13,7 +13,7 @@ class Pila:
             return 'false'
     
     def Pila_Llena(self):
-        if(self.puntero+1==self.capacidad):
+        if(len(self.pila)==self.capacidad):  # = self.puntero+1==self.capacidad
             return 'true'
         else:
             return 'false'
@@ -26,7 +26,20 @@ class Pila:
             self.puntero=self.puntero+1
             return "elemento agregado"
     
+    def Pop(self):
+        if(self.Pila_Vacia()=='true'):
+            return "No Existe Ningun Elemento En La Pila, Pila Vacia"
+        else:
+            self.puntero = self.puntero - 1
+            return self.pila.pop()  # = self.pila[self.puntero]
+    
     def Imprimir_Pila(self):
+        print("Imprimiento Pila:")
+        c = self.puntero
+        while(c > -1):
+            print(str(self.pila[c]))
+            c = c -1
+    def Imprimir_Pila_Dev(self):
         print(str(self.pila)+"; posicion_puntero: "+str(self.puntero)+"; capacidad: "+str(self.capacidad))
     
     
