@@ -39,7 +39,37 @@ class Pila:
         """
         for k in elementos:
             print(self.Push(k))
+            
+    def Num_Elem_Pila(self):
+        """
+        Devuelve el numero de elementos de la pila
+        """
+        return len(self.pila)
     
+    def Cima(self):
+        """
+        Devuelve la cima de la pila, sin eliminarla
+        """
+        if(self.Pila_Vacia()=='true'):
+            return "Pila Vacia"
+        else:
+            return self.pila[self.puntero]
+    
+    def Decapitar(self):
+        if(self.Pila_Vacia()=='true'):
+            return "Pila Vacia"
+        else:
+            self.pila.pop()
+            self.puntero = self.puntero -1
+            return "Decapitado Correctamente"
+        
+    def Eliminar_Pila(self,var_pila):
+        """
+        Recibe una pila y la devuelve vacia
+        """
+        var_pila = []
+        print(var_pila)
+        return var_pila
     
     def Imprimir_Pila(self):
         print("Imprimiento Pila:")

@@ -10,3 +10,15 @@ pila = Pila(2)
 pila.Leer_Pila(4,5,6)
 pila.Imprimir_Pila()
 pila.Imprimir_Pila_Dev()
+
+print("Num_Elem_Pila: "+str(pila.Num_Elem_Pila()))
+print("Cima: "+str(pila.Cima()))
+pila.Imprimir_Pila_Dev()
+
+print("Decapitar: "+pila.Decapitar())
+pila.Imprimir_Pila_Dev()
+
+pila_var=Pila(8)
+pila_var.Leer_Pila(7,8,9)
+
+print("elminar_pila: "+str(pila.Eliminar_Pila(pila_var)))
