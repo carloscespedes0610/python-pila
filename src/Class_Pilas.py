@@ -24,7 +24,7 @@ class Pila:
         else:
             self.pila.append(elemento)
             self.puntero=self.puntero+1
-            return "elemento agregado"
+            return "Elemento Agregado: "+str(elemento)
     
     def Pop(self):
         if(self.Pila_Vacia()=='true'):
@@ -33,12 +33,22 @@ class Pila:
             self.puntero = self.puntero - 1
             return self.pila.pop()  # = self.pila[self.puntero]
     
+    def Leer_Pila(self, *elementos):
+        """
+            Realiza la carga inicial de elementos de la pila
+        """
+        for k in elementos:
+            print(self.Push(k))
+    
+    
     def Imprimir_Pila(self):
         print("Imprimiento Pila:")
         c = self.puntero
         while(c > -1):
             print(str(self.pila[c]))
             c = c -1
+            
+            
     def Imprimir_Pila_Dev(self):
         print(str(self.pila)+"; posicion_puntero: "+str(self.puntero)+"; capacidad: "+str(self.capacidad))
     
