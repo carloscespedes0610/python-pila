@@ -1,4 +1,5 @@
 from Class_Pilas import *
 
 pila = Pila(9)
-print(pila.crear())
+print(pila.Pila_Vacia())
+print(pila.Pila_Llena())
