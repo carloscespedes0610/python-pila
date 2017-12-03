@@ -164,7 +164,25 @@ class ejercicios_pila:
             if(self.Existe_en_Pila(pila_dup1,elemento)):
                 resultado.Push(elemento)
                 
-        return resultado    
+        return resultado   
+    
+    def Union(self,var_pila1,var_pila2):
+        """
+        Realizar la union de dos pilas
+        """
+        
+        pila_dup1 = self.Duplica_Contenido_Auxiliar(var_pila1)
+        pila_dup2 = self.Duplica_Contenido_Auxiliar(var_pila2)
+        
+        resultado = Pila(pila_dup1.get_capacidad()+ pila_dup2.get_capacidad()) 
+        
+        while(not pila_dup1.Pila_Vacia()): 
+            resultado.Push(pila_dup1.Pop())
+        
+        while(not pila_dup2.Pila_Vacia()): 
+            resultado.Push(pila_dup2.Pop())
+                
+        return resultado   
         
         
         

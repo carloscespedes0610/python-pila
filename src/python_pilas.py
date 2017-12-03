@@ -79,6 +79,19 @@ ej.Interseccion(pila,pila2).Imprimir_Pila()
 pila = []
 pila2 = []
 
+# Union ----------------------------------------
+print("-*-*-*-*-*-*-*- Union *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(1,2,3,4,5)
+pila2 = Pila(4)
+pila2.Leer_Pila(6,7,8,9)
+print("Pila Resultante de la Union: ")
+ej.Union(pila,pila2).Imprimir_Pila()
+pila = []
+pila2 = []
+
+
+
 
 
 
