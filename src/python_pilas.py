@@ -30,5 +30,6 @@ ej= ejercicios_pila()
 #ej.Fondo_Pila(0)
 ej.Imprimir()
 
-ej.Eliminar_Ocurrencias(2)
+#ej.Eliminar_Ocurrencias(2)
+ej.Intercambio_tope_fondo()
 ej.Imprimir()
