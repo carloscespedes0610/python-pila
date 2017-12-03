@@ -111,3 +111,7 @@ print("Pila Resultante de la Union: ")
 ej.Union(pila,pila2).Imprimir_Pila()
 pila = []
 pila2 = []
+
+print("-*-*-*-*-*-*-*- Fin *-*-*-*-*-*-*-*-*-*-*-*-*")
+print("Alumno: Carlos Alberto Cespedes Soliz")
+
