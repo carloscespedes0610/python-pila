@@ -1,0 +1,29 @@
+Serie de Ejercicios: Pilas
+
+1. Realizar la implementación de un TDA pila utilizando LISTAS desarrollando las siguientes operaciones primitivas:
+
+	•	pilaVacia: Devuelve true si la pila está vacia (no tiene elementos) y false en caso contrario.
+	•	pilaLlena: Devuelve true si la pila está llena (si la pila ha alcanzado la cima)
+	•	apilar (push): Entrega un elemento (x) para que quede incorporado a la cima de la pila.
+	•	desapilar (pop): Elimina el elemento que ocupa la cima de la pila y devuelve como resultado dicho elemento.
+	•	leerPila: Realiza la carga inicial de elementos de la pila.
+	•	imprimirPila: Muestra en pantalla el contenido de la pila.
+	•	numElemPila: Devuelve el numero de elementos de la pila.
+	•	cima: Devuelve la cima de la pila.
+	•	decapitar: Elimina el elemento de la cima de la pila.
+	•	eliminarPila: Recibe una pila y la devuelve vacia.
+
+2. Desarrollar los siguientes algoritmos, utilizando sólo las operaciones primitivas de pila:
+
+	•	Imprimir el contenido de una pila de enteros sin cambiar su contenido.
+	•	Colocar en el fondo de una pila un nuevo elemento.
+	•	Calcular el número de elementos de una pila sin modificar su contenido.
+	•	Eliminar de una pila todas las ocurrencias de un elemento dado.
+	•	Intercambiar los valores del tope y el fondo de una pila.
+	•	Duplicar el contenido de una pila.
+	•	Verificar si el contenido de una pila de caracteres es un palíndrome.
+	•	Calcular la suma de una pila de enteros sin modificar su contenido.
+	•	Invertir los elementos de una pila.
+	•	Comprobar si un elemento pertenece a una pila.
+	•	Realizar la intersección de dos pilas.
+	•	Realizar la unión de dos pilas.

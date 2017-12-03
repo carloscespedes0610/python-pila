@@ -6,6 +6,9 @@ class Pila:
         self.pila=list()
         self.puntero=-1
     
+    def get_capacidad(self):
+        return self.capacidad
+    
     def Pila_Vacia(self):
             return self.pila == []
     

@@ -27,9 +27,8 @@ from ejercicios_pila import *
 ej= ejercicios_pila()
 #ej.Imprimir()
 
-ej.Fondo_Pila(0)
+#ej.Fondo_Pila(0)
 ej.Imprimir()
-#ej.Numero_Elementos()
-#ej.Imprimir()
 
-#ej.prueba()
+ej.Eliminar_Ocurrencias(2)
+ej.Imprimir()
