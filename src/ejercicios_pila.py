@@ -1,4 +1,4 @@
-from Class_Pilas import *
+from Class_Pilas import*
 
 class ejercicios_pila:
     
@@ -100,3 +100,16 @@ class ejercicios_pila:
                 pila_dup = pila_dup2
             
         return pila_fin
+    
+    def es_palindrome(self,var_pila):
+        pila_dup = self.Duplica_Contenido_Auxiliar(var_pila)
+        pila_copia_ori = self.Duplica_Contenido_Auxiliar(pila_dup)
+        while(not pila_copia_ori.Pila_Vacia()):
+            if pila_dup.Pop() != pila_copia_ori.Pop():
+                return False
+        
+        if(self.pila.Pila_Vacia()):
+            return False
+        else:
+            return True
+        

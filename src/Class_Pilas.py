@@ -17,11 +17,11 @@ class Pila:
         
     def Push(self, elemento):
         if(self.Pila_Llena()):
-            return "Pila Llena, el elemento "+str(elemento)+" no pudo ser agregado"
+            print("Pila Llena, el elemento "+str(elemento)+" no pudo ser agregado")
         else:
             self.pila.append(elemento)
             self.puntero=self.puntero+1
-            return "Elemento Agregado: "+str(elemento)
+#            return "Elemento Agregado: "+str(elemento)
     
     def Pop(self):
         if(self.Pila_Vacia()):
@@ -35,7 +35,7 @@ class Pila:
             Realiza la carga inicial de elementos de la pila
         """
         for k in elementos:
-            print(self.Push(k))
+            self.Push(k)
             
     def Num_Elem_Pila(self):
         """

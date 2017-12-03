@@ -1,14 +1,15 @@
-#from Class_Pilas import *
 from ejercicios_pila import *
 
-#pila = Pila(2)
-##print("pila vacia: "+pila.Pila_Vacia())
-##print("pila llena: "+pila.Pila_Llena())
-##print("push: "+pila.Push(8))
-##print("push: "+pila.Push(2))
-##print("push: "+pila.Push(5))
-##print("pop: "+str(pila.Pop()))
-#pila.Leer_Pila(4,5,6)
+ej= ejercicios_pila()
+
+#pila = Pila(10)
+#print("push: "+pila.Push('c'))
+#print("push: "+pila.Push('a'))
+#print("push: "+pila.Push('r'))
+#print("push: "+pila.Push('l'))
+#print("push: "+pila.Push('o'))
+#print("push: "+pila.Push('s'))
+#pila.Leer_Pila('a','n','a')
 #pila.Imprimir_Pila()
 #pila.Imprimir_Pila_Dev()
 #
@@ -24,7 +25,7 @@ from ejercicios_pila import *
 #
 #print("elminar_pila: "+str(pila.Eliminar_Pila(pila_var)))
 
-ej= ejercicios_pila()
+
 #ej.Imprimir()
 
 #ej.Fondo_Pila(0)
@@ -32,6 +33,14 @@ ej.Imprimir()
 
 #ej.Eliminar_Ocurrencias(2)
 #ej.Intercambio_tope_fondo()
-print("duplicar")
-ej.Duplicar_Contenido().Imprimir_Pila_Dev()
-#ej.Imprimir()
+#print("duplicar")
+#ej.Duplicar_Contenido().Imprimir_Pila_Dev()
+
+# es palindrome -----------------------------------------
+print("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila('s','e','d','e','p','s','e','c') # cespedes
+#pila.Leer_Pila('a','n','a')
+pila.Imprimir_Pila()
+print("es palindrome: "+str(ej.es_palindrome(pila)))
+
