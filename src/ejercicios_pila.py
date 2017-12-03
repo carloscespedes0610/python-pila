@@ -127,3 +127,10 @@ class ejercicios_pila:
             suma = suma + int(pila_dup.Pop())
         
         return suma
+    
+    def Invertir_Pila(self,var_pila):
+        """
+        Invertir los elementos de una pila
+        """
+        
+        return self.Duplica_Contenido_Auxiliar(var_pila)

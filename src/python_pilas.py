@@ -49,5 +49,18 @@ print("-*-*-*-*-*-*-*- suma de elementos *-*-*-*-*-*-*-*-*-*-*-*-*")
 pila = Pila(10)
 pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
 print("La suma de los Elementos es: "+str(ej.Suma_Elementos(pila)))
+pila = []
+
+# Invertir Pila ----------------------------------------
+print("-*-*-*-*-*-*-*- Invertir Pila *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
+print("Pila Original:")
+pila.Imprimir_Pila()
+print("Pila Invertida:")
+ej.Invertir_Pila(pila).Imprimir_Pila()
+pila = []
+
+
 
 
