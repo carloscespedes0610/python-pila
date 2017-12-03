@@ -67,7 +67,36 @@ class ejercicios_pila:
         
         if(fondo != 'null'):
             self.pila.Push(fondo)
-            
-            
     
+    def Duplica_Contenido_Auxiliar(self,var_pila):
+        # motodo que devuelve una pila inversa o sea con puros push()
+        pila_aux = Pila(var_pila.get_capacidad())
+        pila2 = Pila(var_pila.get_capacidad())
+        while(not var_pila.Pila_Vacia()):
+            elemento = var_pila.Pop()
+            pila_aux.Push(elemento)
+            pila2.Push(elemento)
         
+        # como python funciona con puntero, el parametro se modifico, entonces
+        # volveremos a dejarlo como estaba
+        while(not pila2.Pila_Vacia()):
+            var_pila.Push(pila2.Pop())
+
+        return pila_aux
+        
+    
+    def Duplicar_Contenido(self):
+        # obtenemos 2 pila iguales inversas
+        pila_dup = self.Duplica_Contenido_Auxiliar(self.pila)
+        pila_dup2 = self.Duplica_Contenido_Auxiliar(self.pila)
+        
+        pila_fin = Pila(self.pila.get_capacidad()*2)
+        
+        while(not pila_dup.Pila_Vacia()):
+            pila_fin.Push(pila_dup.Pop())
+            # verificamos si la primera pila ya se termino
+            if(pila_dup.Pila_Vacia()):
+                # si termino, le pasamos la proxima para q asi sea doble
+                pila_dup = pila_dup2
+            
+        return pila_fin
