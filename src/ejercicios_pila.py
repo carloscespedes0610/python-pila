@@ -2,71 +2,71 @@ from Class_Pilas import*
 
 class ejercicios_pila:
     
-    
     def __init__(self):
         self.pila = Pila(10)
         self.pila.Leer_Pila(1,2,3,4,5,6,7,8)
         
-    def Imprimir(self):
-        self.pila.Imprimir_Pila()
+    def Imprimir(self, var_pila):
+        var_pila.Imprimir_Pila()
         
-    def Fondo_Pila(self,elemento):
+    def Fondo_Pila(self,var_pila,elemento):
         """
         Colocar en el fondo de una pila un nuevo elemento.
         """
-        pila_aux=Pila(self.pila.Num_Elem_Pila()+1)
-        while(not self.pila.Pila_Vacia()):
-            pila_aux.Push(self.pila.Pop())
+        pila_aux=Pila(var_pila.Num_Elem_Pila()+1)
+        while(not var_pila.Pila_Vacia()):
+            pila_aux.Push(var_pila.Pop())
         
-        self.pila.Push(elemento) # introducimos primero el elemento
+        var_pila.Push(elemento) # introducimos primero el elemento
             
         while(not pila_aux.Pila_Vacia()):
-            self.pila.Push(pila_aux.Pop())
+            var_pila.Push(pila_aux.Pop())
         
         
-    def Numero_Elementos(self):
+    def Numero_Elementos(self,var_pila):
         """
         Calcular el numero de elementos de una pila sin modificar su contenido
         """
         
-        print(self.pila.Num_Elem_Pila())
+        print(var_pila.Num_Elem_Pila())
         
-    def Eliminar_Ocurrencias(self,elemento):
+    def Eliminar_Ocurrencias(self,var_pila,elemento):
         """
             Eliminar de una pila todas las ocurrencias de un elemento dado.
         """
-        pila_aux = Pila(self.pila.get_capacidad())
-        
-        while(not self.pila.Pila_Vacia()):
-            ele = self.pila.Pop();
+        pila_aux = Pila(var_pila.get_capacidad())
+        while(not var_pila.Pila_Vacia()):
+            ele = var_pila.Pop();
             if(elemento != ele ):
                 pila_aux.Push(ele)
         
-        self.pila = pila_aux
+        pila_aux.Imprimir_Pila()
+        var_pila = pila_aux
         
-    def Intercambio_tope_fondo(self):
+        
+    def Intercambio_tope_fondo(self,var_pila):
         """
         Intercambiar los valores del tope y el fondo de una pila
         """
         tope = 'null'
         fondo = 'null'
-        pila_aux=Pila(self.pila.get_capacidad())
-        while(not self.pila.Pila_Vacia()):
+        pila_aux=Pila(var_pila.get_capacidad())
+        while(not var_pila.Pila_Vacia()):
             if( tope == 'null'):
-                tope = self.pila.Pop()
+                tope = var_pila.Pop()
             else:
-                pila_aux.Push(self.pila.Pop())
+                pila_aux.Push(var_pila.Pop())
         
         while(not pila_aux.Pila_Vacia()):
             if(tope != 'null'):
-                self.pila.Push(tope)
+                var_pila.Push(tope)
                 tope = 'null'
                 fondo = pila_aux.Pop()
             else:
-                self.pila.Push(pila_aux.Pop())
+                var_pila.Push(pila_aux.Pop())
         
         if(fondo != 'null'):
-            self.pila.Push(fondo)
+            var_pila.Push(fondo)
     
     def Duplica_Contenido_Auxiliar(self,var_pila):
         # motodo que devuelve una pila inversa o sea con puros push()
@@ -85,12 +85,12 @@ class ejercicios_pila:
         return pila_aux
         
     
-    def Duplicar_Contenido(self):
+    def Duplicar_Contenido(self,var_pila):
         # obtenemos 2 pila iguales inversas
-        pila_dup = self.Duplica_Contenido_Auxiliar(self.pila)
-        pila_dup2 = self.Duplica_Contenido_Auxiliar(self.pila)
+        pila_dup = self.Duplica_Contenido_Auxiliar(var_pila)
+        pila_dup2 = self.Duplica_Contenido_Auxiliar(var_pila)
         
-        pila_fin = Pila(self.pila.get_capacidad()*2)
+        pila_fin = Pila(var_pila.get_capacidad()*2)
         
         while(not pila_dup.Pila_Vacia()):
             pila_fin.Push(pila_dup.Pop())

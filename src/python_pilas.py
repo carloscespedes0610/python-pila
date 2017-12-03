@@ -2,38 +2,60 @@ from ejercicios_pila import *
 
 ej= ejercicios_pila()
 
-#pila = Pila(10)
-#print("push: "+pila.Push('c'))
-#print("push: "+pila.Push('a'))
-#print("push: "+pila.Push('r'))
-#print("push: "+pila.Push('l'))
-#print("push: "+pila.Push('o'))
-#print("push: "+pila.Push('s'))
-#pila.Leer_Pila('a','n','a')
-#pila.Imprimir_Pila()
-#pila.Imprimir_Pila_Dev()
-#
-#print("Num_Elem_Pila: "+str(pila.Num_Elem_Pila()))
-#print("Cima: "+str(pila.Cima()))
-#pila.Imprimir_Pila_Dev()
-#
-#print("Decapitar: "+pila.Decapitar())
-#pila.Imprimir_Pila_Dev()
-#
-#pila_var=Pila(8)
-#pila_var.Leer_Pila(7,8,9)
-#
-#print("elminar_pila: "+str(pila.Eliminar_Pila(pila_var)))
+# Imprimir pila sin modificar su contenido ----------------------
+print("-*-*-*-*-*-*-*- Imprimir pila sin modificar su contenido *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila('c','a','r','l','o','s')
 
+ej.Imprimir(pila)
+print("Pila Original, verificamos que no se modifico su contenido: ")
+pila.Imprimir_Pila()
+pila=[]
 
-#ej.Imprimir()
+# Colocar en el Fondo de la pila ----------------------
+print("-*-*-*-*-*-*-*- Colocar en el Fondo de la pila *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
+print("Pila con elemento agregado al fondo: ")
+ej.Fondo_Pila(pila,0)
+pila.Imprimir_Pila()
+pila=[]
 
-#ej.Fondo_Pila(0)
+# calcular el numero de elementos de una pila sin modificar su contenido -----------------
+print("-*-* numeros de elementos de una pila sin modificar su contenido *-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila('c','a','r','l','o','s')
 
-#ej.Eliminar_Ocurrencias(2)
-#ej.Intercambio_tope_fondo()
-#print("duplicar")
-#ej.Duplicar_Contenido().Imprimir_Pila_Dev()
+print("Numeros de Elementos: "+str(ej.Numero_Elementos(pila)))
+print("Pila Original, verificamos que no se modifico su contenido: ")
+pila.Imprimir_Pila()
+pila=[]
+
+# Eliminar de una pila todas las ocurrencias de un elemento dado-------------
+print("-*-*-*-*-*-*-*- eliminar las ocurrencias de un elemento de una pila *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
+ej.Eliminar_Ocurrencias(pila,5)
+print("Pila con elemento elminado: ")
+pila.Imprimir_Pila()
+pila=[]
+
+# Intercambiar los valores del tope y el fondo de una pila-------------
+print("-*-*-*-*-*-*-*- Intercambiar tope y fondo de una pila *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
+ej.Intercambio_tope_fondo(pila)
+print("Pila con tope y fondo intercambiado: ")
+pila.Imprimir_Pila()
+pila=[]
+
+# Duplicar el contenido de una pila--------------------------------------------
+print("-*-*-*-*-*-*-*- Duplicar el contenido de una pila *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(0,1,2,3,4,5,6,7,8,9)
+print("Pila con elementos duplicados: ")
+ej.Duplicar_Contenido(pila).Imprimir_Pila()
+pila=[]
 
 # es palindrome -----------------------------------------
 print("-*-*-*-*-*-*-*- es palindrome *-*-*-*-*-*-*-*-*-*-*-*-*")
@@ -89,9 +111,3 @@ print("Pila Resultante de la Union: ")
 ej.Union(pila,pila2).Imprimir_Pila()
 pila = []
 pila2 = []
-
-
-
-
-
-
