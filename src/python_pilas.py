@@ -61,6 +61,14 @@ print("Pila Invertida:")
 ej.Invertir_Pila(pila).Imprimir_Pila()
 pila = []
 
+# Existe_en_Pila ----------------------------------------
+print("-*-*-*-*-*-*-*- Existe_en_Pila *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
+print("El Elemento existe en la Pila: "+str(ej.Existe_en_Pila(pila,5)))
+pila = []
+
+
 
 
 

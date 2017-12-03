@@ -134,3 +134,11 @@ class ejercicios_pila:
         """
         
         return self.Duplica_Contenido_Auxiliar(var_pila)
+    
+    def Existe_en_Pila(self,var_pila,elemento):
+        pila_dup = self.Duplica_Contenido_Auxiliar(var_pila)
+        while(not pila_dup.Pila_Vacia()):
+            if(pila_dup.Pop()==elemento):
+                return True
+            
+        return False
