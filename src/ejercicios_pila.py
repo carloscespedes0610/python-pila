@@ -102,6 +102,10 @@ class ejercicios_pila:
         return pila_fin
     
     def es_palindrome(self,var_pila):
+        """
+        Verificar si el contenido de una pila de caracteres es un palindrome.
+        palindrome: palabra invertida es igual a la original ej ana, sos, coco
+        """
         pila_dup = self.Duplica_Contenido_Auxiliar(var_pila)
         pila_copia_ori = self.Duplica_Contenido_Auxiliar(pila_dup)
         while(not pila_copia_ori.Pila_Vacia()):
@@ -113,3 +117,13 @@ class ejercicios_pila:
         else:
             return True
         
+    def Suma_Elementos(self, var_pila):
+        """
+        Calcular la suma de una pila de enteros sin modificar su contenido.
+        """
+        pila_dup = self.Duplica_Contenido_Auxiliar(var_pila)
+        suma=0
+        while(not pila_dup.Pila_Vacia()):
+            suma = suma + int(pila_dup.Pop())
+        
+        return suma

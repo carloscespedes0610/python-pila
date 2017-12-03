@@ -29,7 +29,6 @@ ej= ejercicios_pila()
 #ej.Imprimir()
 
 #ej.Fondo_Pila(0)
-ej.Imprimir()
 
 #ej.Eliminar_Ocurrencias(2)
 #ej.Intercambio_tope_fondo()
@@ -37,10 +36,18 @@ ej.Imprimir()
 #ej.Duplicar_Contenido().Imprimir_Pila_Dev()
 
 # es palindrome -----------------------------------------
-print("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+print("-*-*-*-*-*-*-*- es palindrome *-*-*-*-*-*-*-*-*-*-*-*-*")
 pila = Pila(10)
 pila.Leer_Pila('s','e','d','e','p','s','e','c') # cespedes
 #pila.Leer_Pila('a','n','a')
 pila.Imprimir_Pila()
 print("es palindrome: "+str(ej.es_palindrome(pila)))
+pila = []
+
+# suma de enteros ----------------------------------------
+print("-*-*-*-*-*-*-*- suma de elementos *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
+print("La suma de los Elementos es: "+str(ej.Suma_Elementos(pila)))
+
 
