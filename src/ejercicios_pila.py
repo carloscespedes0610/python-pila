@@ -142,3 +142,29 @@ class ejercicios_pila:
                 return True
             
         return False
+    
+    def Interseccion(self,var_pila1,var_pila2):
+        """
+        Realizar la interseccion de dos pilas
+        """
+        
+        # pila_dup1 contendra la pila con mayor elementos
+        
+        if(var_pila1.Num_Elem_Pila() > var_pila2.Num_Elem_Pila()):
+            pila_dup1 = self.Duplica_Contenido_Auxiliar(var_pila1)
+            pila_dup2 = self.Duplica_Contenido_Auxiliar(var_pila2)
+        else:
+            pila_dup1 = self.Duplica_Contenido_Auxiliar(var_pila2)
+            pila_dup2 = self.Duplica_Contenido_Auxiliar(var_pila1)
+        
+        resultado = Pila(pila_dup2.get_capacidad()) # capacidad de las menores de las pilas
+        
+        while(not pila_dup2.Pila_Vacia()): #recorremos la pila menor
+            elemento = pila_dup2.Pop()
+            if(self.Existe_en_Pila(pila_dup1,elemento)):
+                resultado.Push(elemento)
+                
+        return resultado    
+        
+        
+        

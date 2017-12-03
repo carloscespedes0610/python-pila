@@ -68,6 +68,16 @@ pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
 print("El Elemento existe en la Pila: "+str(ej.Existe_en_Pila(pila,5)))
 pila = []
 
+# Interseccion ----------------------------------------
+print("-*-*-*-*-*-*-*- Interseccion *-*-*-*-*-*-*-*-*-*-*-*-*")
+pila = Pila(10)
+pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
+pila2 = Pila(4)
+pila2.Leer_Pila(7,10,9,5)
+print("Pila Resultante de la Interseccion: ")
+ej.Interseccion(pila,pila2).Imprimir_Pila()
+pila = []
+pila2 = []
 
 
 
