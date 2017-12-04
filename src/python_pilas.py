@@ -35,11 +35,11 @@ pila=[]
 print("-*-*-*-*-*-*-*- eliminar las ocurrencias de un elemento de una pila *-*-*-*-*-*-*-*-*-*-*-*-*")
 pila = Pila(10)
 pila.Leer_Pila(1,2,3,4,5,6,7,8,9)
-ej.Eliminar_Ocurrencias(pila,5)
+pila=ej.Eliminar_Ocurrencias(pila,5)
 print("Pila con elemento elminado: ")
 pila.Imprimir_Pila()
 pila=[]
-
+#
 # Intercambiar los valores del tope y el fondo de una pila-------------
 print("-*-*-*-*-*-*-*- Intercambiar tope y fondo de una pila *-*-*-*-*-*-*-*-*-*-*-*-*")
 pila = Pila(10)

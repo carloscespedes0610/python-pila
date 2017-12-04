@@ -28,7 +28,7 @@ class ejercicios_pila:
         Calcular el numero de elementos de una pila sin modificar su contenido
         """
         
-        print(var_pila.Num_Elem_Pila())
+        return var_pila.Num_Elem_Pila()
         
     def Eliminar_Ocurrencias(self,var_pila,elemento):
         """
@@ -39,10 +39,9 @@ class ejercicios_pila:
             ele = var_pila.Pop();
             if(elemento != ele ):
                 pila_aux.Push(ele)
-        
-        pila_aux.Imprimir_Pila()
-        var_pila = pila_aux
-        
+#       
+        return pila_aux
+#        
         
     def Intercambio_tope_fondo(self,var_pila):
         """
